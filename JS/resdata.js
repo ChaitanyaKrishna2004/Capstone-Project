@@ -1,8 +1,5 @@
 export const restaurantData = {
-  id: 1,
   name: "Burger Hub",
-  image:
-    "https://source.unsplash.com/random/1600x900/?photorealistic,gourmet,burger,on,a,platter",
   cuisine: "American",
   menu: [
     {

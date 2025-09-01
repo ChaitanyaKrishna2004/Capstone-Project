@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-gray-800 dark:text-white truncate">${restaurant.name}</h3>
                 <p class="text-amber-700 dark:text-amber-400 font-semibold mt-1">${restaurant.cuisine}</p>
-                <a href="#" class="mt-4 inline-block bg-gray-800 dark:bg-amber-400 hover:bg-gray-900 dark:hover:bg-amber-500 text-white dark:text-gray-900 font-bold py-2 px-6 rounded-full text-md transition-all transform hover:scale-105 shadow-md">
+                <a href="restaurant.html" class="mt-4 inline-block bg-gray-800 dark:bg-amber-400 hover:bg-gray-900 dark:hover:bg-amber-500 text-white dark:text-gray-900 font-bold py-2 px-6 rounded-full text-md transition-all transform hover:scale-105 shadow-md">
                     Order Now
                 </a>
             </div>

@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("restaurant-name").textContent = restaurantData.name;
   document.getElementById("restaurant-cuisine").textContent =
     restaurantData.cuisine;
-  document.getElementById("hero-bg-image").src = restaurantData.image;
-  document.title = `${restaurantData.name} - BU Eats`;
+  document.title = `${restaurantData.name} Menu - BU Eats`;
 
   const menuContainer = document.getElementById("menu-container");
   restaurantData.menu.forEach((item) => {
