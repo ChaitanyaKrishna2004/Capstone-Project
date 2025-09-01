@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BU Eats - Campus Food Ordering</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased bg-white dark:bg-gray-800 transition-colors duration-300">
+
+    <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 w-full z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-gray-800 dark:text-white tracking-wider">BU Eats</a>
+            <nav class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#restaurants" class="nav-link text-gray-600 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Restaurants</a>
+                <a href="#about" class="nav-link text-gray-600 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors">About Us</a>
+                <a href="#contact" class="nav-link text-gray-600 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div id="header-icons" class="flex items-center space-x-4"></div>
+                <button id="theme-toggle-btn" class="p-2 rounded-full text-gray-800 dark:text-amber-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white flex flex-col justify-center items-center text-center overflow-hidden pt-20">
+            <div class="container mx-auto px-6 z-10">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+                    Your Campus Cravings, <span class="text-amber-500 dark:text-amber-400">Delivered.</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 animate-fade-in-up text-gray-600 dark:text-gray-300">
+                    Discover and order from all your favorite university restaurants in one place. Fast, easy, and convenient.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#restaurants" class="nav-link bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
+                        Explore Restaurants
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="restaurants" class="py-16 md:py-24 bg-gray-100 dark:bg-gray-900">
+            <div class="container mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 dark:text-white mb-12 px-6">Featured Restaurants</h2>
+                <div class="relative group">
+                    <div id="restaurant-slider-container" class="flex space-x-8 overflow-x-auto pb-8 scrollbar-hide -mx-6 px-6">
+                    </div>
+                    <button id="scroll-left-btn" class="absolute top-1/2 -translate-y-1/2 left-0 bg-white dark:bg-gray-700 p-2 rounded-full shadow-md transition-opacity opacity-0 group-hover:opacity-100 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none ml-2 z-10">
+                    </button>
+                    <button id="scroll-right-btn" class="absolute top-1/2 -translate-y-1/2 right-0 bg-white dark:bg-gray-700 p-2 rounded-full shadow-md transition-opacity opacity-0 group-hover:opacity-100 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none mr-2 z-10">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+            <div id="how-it-works-container" class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">How It Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 bg-gray-100 dark:bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">What is BU Eats?</h2>
+                        <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                            BU Eats is a platform designed to simplify food ordering in university restaurants. Students can explore menus, place orders, and enjoy faster service with reduced wait times.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 relative">
+                        <div class="absolute -inset-4 bg-amber-200 dark:bg-amber-800/50 rounded-full opacity-50 blur-xl"></div>
+                        <img src="https://source.unsplash.com/random/600x400/?students,eating,laughing" alt="Students enjoying food" class="relative z-10 rounded-2xl shadow-xl w-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-gray-800 dark:bg-gray-950 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p class="text-gray-300 hover:text-white transition-colors">support@bueats.com</p>
+                    <p class="text-gray-300 hover:text-white transition-colors">+1 (123) 456-7890</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Address</h3>
+                    <p class="text-gray-300">Binghamton University</p>
+                    <p class="text-gray-300">4400 Vestal Pkwy E, Binghamton, NY</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div id="footer-social-icons" class="flex justify-center md:justify-start space-x-4">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 BU Eats. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="describer-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 max-w-lg w-full relative text-center animate-fade-in-up">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">
+            </button>
+            <h2 id="modal-restaurant-name" class="text-2xl font-bold mb-2 text-gray-800 dark:text-white"></h2>
+            <p id="modal-restaurant-cuisine" class="text-amber-700 dark:text-amber-400 font-medium mb-4"></p>
+            <div class="mt-4 p-4 min-h-[80px] flex items-center justify-center bg-gray-50 dark:bg-gray-700 rounded-lg border dark:border-gray-600">
+                <p id="modal-description" class="text-gray-800 dark:text-gray-200 italic"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
